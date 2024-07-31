@@ -465,13 +465,13 @@ ifneq (0,$(NETCODE))
     blood_game_deps += enet
 endif
 
-blood_game := notblood
+blood_game := nblood
 
 ifneq (,$(APPBASENAME))
     blood_game := $(APPBASENAME)
 endif
 
-blood_game_proper := NotBlood
+blood_game_proper := NBlood
 
 blood_game_objs := \
 	blood.cpp \

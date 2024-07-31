@@ -702,6 +702,9 @@ static void sfxModifyPitchUnderwater(spritetype *pSndSpr, int *nPitch)
 
 void sfxUpdate3DSounds(void)
 {
+    #ifdef NORENDER
+        return;
+#   endif
     sfxUpdateListenerPos();
     sfxUpdateListenerVel();
     sfxUpdateSpeedOfSound();

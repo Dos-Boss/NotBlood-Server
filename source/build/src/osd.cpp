@@ -870,6 +870,9 @@ void OSD_SetLogFile(const char *fn)
 {
     if (!fn)
         return;
+    #ifdef NORENDER
+        return;
+    #endif
 
     loguru::add_file(fn, loguru::Truncate, loguru::Verbosity_INFO);
 
